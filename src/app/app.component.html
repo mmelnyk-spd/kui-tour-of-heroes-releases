@@ -1,9 +1,16 @@
-<div class="header">
+<div class="header {{mode}}">
+  <button class="header-switcher" (click)="toggleHeaderMode()" kendoButton [primary]="true" icon="hamburger">
+    <ng-template [ngIf]="isDefaultMode()">
+      oh boy, too huge header
+    </ng-template>
+    <ng-template [ngIf]="isSmallMode()">
+      oh crap, get me back to huge header
+    </ng-template>
+  </button>
   <h1 class="main-title">
-    <span class="salty" data-text="Tour of H">Tour of H</span>
-    <span data-text="eroes">eroes</span>
+    <span class="salty" data-text="Tour of P">Tour of P</span>
+    <span data-text="onnies">onnies</span>
   </h1>
-  <img src="../assets/images/retro-mlp/my-littt-ponies-rainbow.png" alt="retro my little pony rainbow">
 
   <nav>
     <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
@@ -15,7 +22,6 @@
   <section class="main-section">
     <router-outlet></router-outlet>
   </section>
-  <sidebar></sidebar>
 </div>
 
 <app-messages></app-messages>
@@ -29,7 +35,7 @@
 
 <kendo-bottomnavigation [items]="items" fill="solid" >
   <ng-template kendoBottomNavigationItemTemplate let-item>
-    <div [routerLink]="item.path" class="k-bottom-nav-link"> 
+    <div [routerLink]="item.path" class="k-bottom-nav-link">
       <kendo-icon [name]="item.icon" size="medium"></kendo-icon>
       <span>{{item.text}}</span>
     </div>

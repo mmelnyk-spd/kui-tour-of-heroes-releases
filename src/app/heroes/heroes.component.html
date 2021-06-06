@@ -9,7 +9,7 @@
 
   <!-- (click) passes input value to add() and then clears the input -->
 
-  <button kendoButton (click)="add(heroName.value); heroName.value=''">Add</button>
+  <button kendoButton (click)="add(heroName.value); heroName.value=''" [primary]="true">Add</button>
 
 </kendo-formfield>
 

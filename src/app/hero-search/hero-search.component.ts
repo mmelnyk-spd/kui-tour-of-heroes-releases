@@ -1,10 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { MultiColumnComboBoxComponent } from "@progress/kendo-angular-dropdowns";
-import { Observable, Subject } from 'rxjs';
-
-import {
-   debounceTime, distinctUntilChanged, switchMap
- } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
@@ -15,7 +11,6 @@ import { Contact, contacts } from './contact';
   selector: 'app-hero-search',
   templateUrl: './hero-search.component.html',
   styleUrls: [ './hero-search.component.scss' ],
-  encapsulation: ViewEncapsulation.None
 })
 export class HeroSearchComponent implements OnInit, AfterViewInit {
   @ViewChild("mccbPonies", { static: false })

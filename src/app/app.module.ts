@@ -27,7 +27,6 @@ import { LVM }                 from './list-view/list-view.module';
 import { TileLayoutComponent } from './tile-layout/tile-layout.component';
 import { HeroCardComponent }   from './hero-card/hero-card.component';
 import { EllipsisPipe }        from './ellipsis.pipe';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavigationModule } from '@progress/kendo-angular-navigation';
 import { IconsModule } from '@progress/kendo-angular-icons';
 import { GaugesModule } from '@progress/kendo-angular-gauges';
@@ -73,7 +72,6 @@ import { GaugesModule } from '@progress/kendo-angular-gauges';
     TileLayoutComponent,
     HeroCardComponent,
     EllipsisPipe,
-    SidebarComponent,
   ],
   bootstrap: [ AppComponent ]
 })
